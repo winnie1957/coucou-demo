@@ -26,6 +26,7 @@ html, body {
 #content {
     background-color: #ffffff;
     height:100%;
+    box-sizing: border-box;
     /* 留出header及footer區塊的空間 */
     padding-top: 0;
     padding-bottom: 30px;
@@ -95,29 +96,3 @@ html, body {
     left: 50%;
     transform: translateX(-50%);
 }
-/*
-.card-grop {
-    position: absolute;
-    width: 850px;
-    height: auto;
-    margin-top: 50px;
-
-}
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    width: 200px;
-    padding: 10px;
-    margin: 20px;
-}
-.card img {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    margin-bottom: 10px;
-}
-.card .card-txt p {
-    margin: 0 auto;
-    padding: inherit;
-}
-*/
