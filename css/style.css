@@ -3,90 +3,97 @@
 @import url('https://fonts.googleapis.com/css?family=Caesar Dressing');
 @import url('https://fonts.googleapis.com/css?family=Galada');
 
-html,
-body {
-    font-family: '微軟正黑體', Arial, Helvetica, sans-serif;
-    color: #442300;
-    background-color: antiquewhite;
+html, body {
     height: 100%;
     margin: 0;
 }
-.wrapper {
+#wrapper {
+    font-family: '微軟正黑體', Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    color: #442300;
+    /* 高度最小為100% */
     min-height: 100%;
+    /* 位置設為relative, 作為footer區塊位置的參考 */
     position: relative;
 }
-
-.header {
+#header {
     font-family: '微軟正黑體', 'Quicksand', sans-serif;
     background: url(../img/bg.jpg) repeat;
-    width: 100%;
+    /* header的高度 */  
     height: 550px;
     box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
 }
-
-.header .navbar {
-    background-color: #fff;
-    width: 850px;
-    height: 150px;
-    position: relative;
-    margin: 50px auto 0;
+#content {
+    background-color: #ffffff;
+    height:100%;
+    /* 留出header及footer區塊的空間 */
+    padding-top: 0;
+    padding-bottom: 30px;
+    width:80%;
+    margin:0 auto;
+}
+#footer {
+    background-color: #442300;
+    color: #fff;
+    /* footer的高度 */
+    height: 30px;
+    box-sizing: border-box;
+    /* 設定footer絕對位置在底部 */
+    position: absolute;
+    bottom: 0;
+    /* 展開footer寬度 */
+    width: 100%;
     text-align: center;
-    padding: 0;
+}
+#navbar {
+    background-color: #fff;
+    width: 80%;
+    height: 150px;
+    box-sizing: border-box;
+    /* 固定位置 */    
+    position: absolute;    
+    top: 50px;
+    /* 區塊水平置中 */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-logo {
-    width: inherit;
-    display: flex;
-    justify-content: center;
-    margin: 10px auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-
-.nav-logo img {
+.nav-logo img{
     width: auto;
-    height: 70px;
+    height: 70px;    
 }
-
 .nav-list {
     width: inherit;
     list-style: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    position: relative;
+    margin: 20px auto 20px;
 }
-
 .nav-link {
     text-decoration: none;
     color: #442300;
 }
-
 .nav-link:hover {
-    /*border-bottom: 1px solid #ff9400;*/
+    border-bottom: 1px solid #ff9400;
     color: #ff9400;
 }
-
 .nav-banner {
     background: url(../img/banner0.jpg) no-repeat;
     background-size: cover;
-    width: 850px;
+    width: 80%;
     height: 350px;
-    margin: 0 auto 0;
-}
-
-.content {
-    background-color: #ffffff;
-    width: 850px;
-    height: 100%;
-    position: absolute;
+    /* 固定位置 */    
+    position: absolute;    
+    top: 200px;
+    /* 區塊水平置中 */
     left: 50%;
-    top: 550px;
-    bottom: 30px;
-    transform: translateX(-50%); 
-    
+    transform: translateX(-50%);
 }
 /*
 .card-grop {
@@ -96,7 +103,6 @@ body {
     margin-top: 50px;
 
 }
-
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     background-color: #fff;
@@ -104,27 +110,14 @@ body {
     padding: 10px;
     margin: 20px;
 }
-
 .card img {
     width: 100%;
     height: auto;
     margin: 0 auto;
     margin-bottom: 10px;
 }
-
 .card .card-txt p {
     margin: 0 auto;
     padding: inherit;
 }
 */
-.footer {
-    background-color: #442300;
-    color: #fff;
-    width: 100%;
-    height: 30px;
-    text-align: center;
-    box-sizing: border-box;
-    /* 設定footer絕對位置在底部 */
-    position: absolute;
-    bottom: 0;
-}
